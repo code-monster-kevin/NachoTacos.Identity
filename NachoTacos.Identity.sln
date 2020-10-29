@@ -11,17 +11,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "database", "database", "{62149B03-02FD-4107-A756-1FDA303DAE3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NachoTacos.Identity.EntityFrameworkCore.SqlServer", "NachoTacos.Identity.EntityFrameworkCore.SqlServer\NachoTacos.Identity.EntityFrameworkCore.SqlServer.csproj", "{17A4DF6C-70A9-4341-BA89-F6A6AA39B617}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NachoTacos.Identity.EntityFrameworkCore.SqlServer", "NachoTacos.Identity.EntityFrameworkCore.SqlServer\NachoTacos.Identity.EntityFrameworkCore.SqlServer.csproj", "{17A4DF6C-70A9-4341-BA89-F6A6AA39B617}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "business", "business", "{4F1D28E1-1B02-4B27-A6AC-B35726865021}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NachoTacos.Identity.Admin.Service", "NachoTacos.Identity.Admin.Service\NachoTacos.Identity.Admin.Service.csproj", "{EAEE6EB3-37F5-4917-82AD-EB351C4FDCE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NachoTacos.Identity.Admin.Service", "NachoTacos.Identity.Admin.Service\NachoTacos.Identity.Admin.Service.csproj", "{EAEE6EB3-37F5-4917-82AD-EB351C4FDCE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NachoTacos.Identity.Model", "NachoTacos.Identity.Model\NachoTacos.Identity.Model.csproj", "{C8D4E0D7-62E8-4BE4-B86B-34CB51E7026E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NachoTacos.Identity.Model", "NachoTacos.Identity.Model\NachoTacos.Identity.Model.csproj", "{C8D4E0D7-62E8-4BE4-B86B-34CB51E7026E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{1AB262B3-5CBE-478A-BD52-8A3D0448E95C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NachoTacos.Identity.Api", "NachoTacos.Identity.Api\NachoTacos.Identity.Api.csproj", "{E32295EE-65E7-4466-B9ED-432E2FB6C481}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NachoTacos.Identity.Api", "NachoTacos.Identity.Api\NachoTacos.Identity.Api.csproj", "{E32295EE-65E7-4466-B9ED-432E2FB6C481}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sts", "sts", "{6EB5001E-BE31-4763-B530-5E76064FC353}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NachoTacos.Identity.STS", "NachoTacos.Identity.STS\NachoTacos.Identity.STS.csproj", "{F283C42F-BEC7-4888-863B-461DABEE9DD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,10 @@ Global
 		{E32295EE-65E7-4466-B9ED-432E2FB6C481}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E32295EE-65E7-4466-B9ED-432E2FB6C481}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E32295EE-65E7-4466-B9ED-432E2FB6C481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F283C42F-BEC7-4888-863B-461DABEE9DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F283C42F-BEC7-4888-863B-461DABEE9DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F283C42F-BEC7-4888-863B-461DABEE9DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F283C42F-BEC7-4888-863B-461DABEE9DD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +62,7 @@ Global
 		{EAEE6EB3-37F5-4917-82AD-EB351C4FDCE9} = {4F1D28E1-1B02-4B27-A6AC-B35726865021}
 		{C8D4E0D7-62E8-4BE4-B86B-34CB51E7026E} = {62149B03-02FD-4107-A756-1FDA303DAE3A}
 		{E32295EE-65E7-4466-B9ED-432E2FB6C481} = {1AB262B3-5CBE-478A-BD52-8A3D0448E95C}
+		{F283C42F-BEC7-4888-863B-461DABEE9DD8} = {6EB5001E-BE31-4763-B530-5E76064FC353}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13651845-DD10-46D8-BAE9-B8F64266F409}
