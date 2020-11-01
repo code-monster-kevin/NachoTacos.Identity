@@ -53,9 +53,37 @@ namespace NachoTacos.Identity.STS.Helpers
         {
             string clientUri = "https://localhost:44371";
 
-            Client client1 = new Client
+            Client clientResourceOwner = new Client
             {
-                ClientId = "0c680cfc-8c69-4671-a6f4-59bebc1b343f",
+                ClientId = "client_resourceowner",
+                ClientName = "Nacho Tacos Web",
+                ClientSecrets = { new Secret("nachocheese".Sha256()) },
+                AllowedGrantTypes = GrantTypes.ResourceOwnerPasswordAndClientCredentials,
+                AllowedScopes = new List<string>
+                {
+                    "nachotacos"
+                }
+            };
+
+            Client clientImplicit = new Client
+            {
+                ClientId = "client_implicit",
+                ClientName = "Nacho Tacos Web",
+                ClientSecrets = { new Secret("nachocheese".Sha256()) },
+                AllowedGrantTypes = GrantTypes.Implicit,
+                RedirectUris = { string.Format("{0}/signin-oidc", clientUri) },
+                PostLogoutRedirectUris = { string.Format("{0}/signout-callback-oidc", clientUri) },
+                AllowedScopes = new List<string>
+                {
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile,
+                    "nachotacos"
+                }
+            };
+
+            Client clientCodeFlow = new Client
+            {
+                ClientId = "client_code",
                 ClientName = "Nacho Tacos Web",
                 AllowedGrantTypes = GrantTypes.Code,
                 RedirectUris = { string.Format("{0}/signin-oidc", clientUri) },
@@ -66,19 +94,38 @@ namespace NachoTacos.Identity.STS.Helpers
                 {
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
-                    "nachotacosapi"
+                    "nachotacos"
+                }
+            };
+
+            Client clientHybrid = new Client
+            {
+                ClientId = "client_hybridclient",
+                ClientName = "Nacho Tacos Web",
+                AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
+                ClientSecrets = { new Secret("nachocheese".Sha256()) },
+                RedirectUris = { string.Format("{0}/signin-oidc", clientUri) },
+                PostLogoutRedirectUris = { string.Format("{0}/signout-callback-oidc", clientUri) },
+                AllowedScopes =
+                {
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile,
+                    "nachotacos"
                 }
             };
 
             List<Client> clients = new List<Client>();
-            clients.Add(client1);
+            clients.Add(clientResourceOwner);
+            clients.Add(clientImplicit);
+            clients.Add(clientCodeFlow);
+            clients.Add(clientHybrid);
 
             return clients;
         }
 
         private static List<ApiResource> GetSeedApiResources()
         {
-            ApiResource apiResource1 = new ApiResource("nachotacosapi", "Nacho Tacos API");
+            ApiResource apiResource1 = new ApiResource("nachotacos", "Nacho Tacos");
 
             List<ApiResource> apiResources = new List<ApiResource>();
             apiResources.Add(apiResource1);

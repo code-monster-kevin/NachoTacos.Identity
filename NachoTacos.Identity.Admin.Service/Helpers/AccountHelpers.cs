@@ -78,7 +78,7 @@ namespace NachoTacos.Identity.Admin.Service.Helpers
                 loginStatus = GetLoginStatusDescription(loginAudit.LoginStatus);
                 lastLoginDate = loginAudit.CreatedDate;
             }
-            return AppUser.Create(user.Id, user.Email, user.AccessFailedCount, lastLoginDate, loginStatus);
+            return AppUser.Create(user, lastLoginDate, loginStatus);
         }
 
         public static string IdentityResultErrors(IdentityResult result)
